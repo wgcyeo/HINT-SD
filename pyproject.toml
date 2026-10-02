@@ -1,0 +1,32 @@
+[build-system]
+requires = ["uv_build>=0.12"]
+build-backend = "uv_build"
+
+[project]
+name = "hint-sd"
+version = "0.1.0"
+description = "HINT-SD: Targeted Hindsight Self-Distillation for Long-Horizon Agents"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.13"
+dependencies = [
+  "accelerate>=1.13.0",
+  "datasets>=4.8.5",
+  "numpy>=2.2.0",
+  "peft==0.21.0",
+  "pyarrow>=23.0.0",
+  "python-dotenv>=1.2.2",
+  "requests>=2.32.5",
+  "torch>=2.10.0",
+  "tqdm>=4.67.3",
+  "transformers==5.17.0",
+  "vllm>=0.18.0",
+  "wandb>=0.27.0",
+]
+
+[tool.uv.build-backend]
+module-name = ["src", "env"]
+module-root = ""
+source-include = [".python-version", ".env.example", "uv.lock", "scripts/**", "assets/**"]
+source-exclude = ["env/service/environments/appworld/data", "env/service/environments/appworld/experiments", "env/service/environments/appworld/.tmp", "env/service/environments/bfcl/bfcl_data", "env/service/environments/bfcl/bfcl_eval"]

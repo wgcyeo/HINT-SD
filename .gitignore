@@ -1,0 +1,55 @@
+# Python environments and generated files
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.cache/
+.tmp/
+.coverage*
+htmlcov/
+
+# Local configuration and editor files
+.env
+.env.*
+!.env.example
+.agent/
+AGENTS.md
+.idea/
+.vscode/
+.history/
+.DS_Store
+*.swp
+*~
+
+# Training, evaluation, and build outputs
+artifacts/
+output/
+outputs/
+eval_outputs/
+results/
+logs/
+log/
+wandb/
+checkpoints/
+*.log
+*.pt
+*.ckpt
+*.safetensors
+*.tar.gz
+
+# Downloaded benchmarks and generated datasets
+env/service/environments/appworld/data/
+env/service/environments/appworld/experiments/
+env/service/environments/bfcl/bfcl_data/
+env/service/environments/bfcl/bfcl_eval/
+/data/
+*.parquet
+
+# Local research material
+third_party/
+manuscript/
